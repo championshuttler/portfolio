@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: <strong>Shivam</strong> Singhal
-description: <a href="github.com/championshuttler">Mozilla Code Contributor</a>.Software Developer.
+description: <a href="github.com/championshuttler">Mozilla Code Contributor</a>.Software Developer. Browser Extensions  🥑
 
 profile:
   align: right
