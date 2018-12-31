@@ -15,3 +15,5 @@ Let's say you have a hello world application in Python with job only to print He
 print("Hello World")
 
 {% endhighlight %}
+
+Let's build a simple package for this application, using as few tools and concepts as possible. This is not the proper way to build a package, but it helps you understand what a package is and how the basic process works. The fully proper way to build a package is quite complicated and involves many tools and concepts that build on top of each other, which we will get to in later.
