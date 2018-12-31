@@ -24,28 +24,27 @@ Let's build a simple package for this application, using as few tools and concep
 
 First, create a directory for this package and place the above application in `hello`:
 
-{% highlight python %}
-
-```bash
+```
+bash
 mkdir helloWorld
 cd helloWorld
 editor hello   # put the above source code in this file
 chmod +x hello
 ```
 
-{% endhighlight %}
-
 ## Creating the package root directory
 
 Now that we have an application, let's build a package. The simplest tool for building a .deb file is `dpkg-deb`. It accepts a directory containing package metadata files and content files. Let's create this directory. We call it `packageRoot`.
 
-```bash
+```
+bash
 mkdir packageRoot
 ```
 
 The package metadata must live in a file called `DEBIAN/control` under the package root directory. Let's create it:
 
-```bash
+```
+bash
 mkdir packageRoot/DEBIAN
 editor packageRoot/DEBIAN/control
 ```
@@ -86,14 +85,16 @@ These are the meanings of the fields:
 
 Next, let's define the package contents. All files under the package root directory, except for `DEBIAN`, is considered part of the content. We want `hello` to be installed as `/usr/bin/hello`, so:
 
-```bash
+```
+bash
 mkdir -p packageRoot/usr/bin
 cp hello packageRoot/usr/bin/
 ```
 
 Now that the package root directory is finished, we turn it into a .deb file:
 
-```bash
+```
+bash
 dpkg-deb -b packageRoot hello_1.0.0_all.deb
 ```
 
