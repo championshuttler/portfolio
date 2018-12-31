@@ -39,28 +39,18 @@ chmod +x hello
 
 Now that we have an application, let's build a package. The simplest tool for building a .deb file is `dpkg-deb`. It accepts a directory containing package metadata files and content files. Let's create this directory. We call it `packageRoot`.
 
-{% highlight python %}
-
 ```bash
 mkdir packageRoot
 ```
 
-{% endhighlight %}
-
 The package metadata must live in a file called `DEBIAN/control` under the package root directory. Let's create it:
-
-{% highlight python %}
 
 ```bash
 mkdir packageRoot/DEBIAN
 editor packageRoot/DEBIAN/control
 ```
 
-{% endhighlight %}
-
 This is what `DEBIAN/control` should contain:
-
-{% highlight python %}
 
 ```
 Package: hello
@@ -71,8 +61,6 @@ Depends: python
 Description: Shivam's Hello World Package written in python and prints greeting.
 
 ```
-
-{% endhighlight %}
 
 ### Control file fields
 
