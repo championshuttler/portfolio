@@ -37,12 +37,12 @@ chmod +x hello
 
 ## Creating the package root directory
 
-Now that we have an application, let's build a package. The simplest tool for building a .deb file is `dpkg-deb`. It accepts a directory containing package metadata files and content files. Let's create this directory. We call it `packageroot`.
+Now that we have an application, let's build a package. The simplest tool for building a .deb file is `dpkg-deb`. It accepts a directory containing package metadata files and content files. Let's create this directory. We call it `packageRoot`.
 
 {% highlight python %}
 
 ```bash
-mkdir packageroot
+mkdir packageRoot
 ```
 
 {% endhighlight %}
@@ -52,8 +52,8 @@ The package metadata must live in a file called `DEBIAN/control` under the packa
 {% highlight python %}
 
 ```bash
-mkdir packageroot/DEBIAN
-editor packageroot/DEBIAN/control
+mkdir packageRoot/DEBIAN
+editor packageRoot/DEBIAN/control
 ```
 
 {% endhighlight %}
@@ -100,14 +100,14 @@ These are the meanings of the fields:
 Next, let's define the package contents. All files under the package root directory, except for `DEBIAN`, is considered part of the content. We want `hello` to be installed as `/usr/bin/hello`, so:
 
 ```bash
-mkdir -p packageroot/usr/bin
-cp hello packageroot/usr/bin/
+mkdir -p packageRoot/usr/bin
+cp hello packageRoot/usr/bin/
 ```
 
 Now that the package root directory is finished, we turn it into a .deb file:
 
 ```bash
-dpkg-deb -b packageroot hello_1.0.0_all.deb
+dpkg-deb -b packageRoot hello_1.0.0_all.deb
 ```
 
 ## Verifying that it works
@@ -122,6 +122,8 @@ hello 1.0.0
 
 ## Conclusion
 
-A Debian package is an archive file that contains metadata (such as name, dependencies, description) and files. You have learned how to write a basic metadata specification file (the `control` file) and you have learned how this, combined with the actual files that you want the package to contain, can be turned into a .deb file using `dpkg-deb`. You have also learned how to inspect the insides of a .deb file
+A Debian package is an archive file that contains metadata (such as name, dependencies, description) and files. We have learned how to write a basic metadata specification file (the `control` file).
 
-But as mentioned earlier, using `dpkg-deb` like this is not the _proper_ way to make a package. In the next tutorial we will learn why, and what is a more proper way.
+Thanks for reading. Cheers!!
+
+I code at <a href="https://github.com/championshuttler" target="blank">@championshuttler</a> and tweet at <a href="https://twitter.com/idkHTML" target="blank">@idkHTML</a>. Let me know if you need any help.
