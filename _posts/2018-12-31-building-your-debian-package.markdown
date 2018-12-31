@@ -6,7 +6,7 @@ description: an example of a blog post with some code
 
 ---
 
-So you are Ubuntu/Debian user. You search for some package with `apt-cache search`. You install package with `apt-get install` . You already know that packages contain files , may have some dependencies and some basic `metadata` like we have in `manifest.json` file for `webextensions`.
+So you are Ubuntu/Debian user. You search for some package with `apt-cache search`. You install package with `apt-get install` . You already know that packages contain files , may have some dependencies and some basic `metadata` like we have in `manifest.json` file for `browser webextensions`.
 
 A Debian package - a `.deb` file - sort of tar.gz or zip file containing metadata and files. 
 Let's say you have a hello world application in Python with job only to print Hello World.
@@ -68,9 +68,8 @@ Version: 1.0.0
 Architecture: all
 Maintainer: Shivam Singhal <championshuttler@gmail.com>
 Depends: python
-Description: Shivam's Hello World Package
- championshuttler's hello package is written in Python
- and prints a greeting.
+Description: Shivam's Hello World Package written in python and prints greeting.
+
 ```
 
 {% endhighlight %}
