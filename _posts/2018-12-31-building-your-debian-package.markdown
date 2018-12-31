@@ -1,4 +1,4 @@
-s---
+---
 layout: post
 title: Building your Debian Package
 date: 2018-12-30 15:09:00
