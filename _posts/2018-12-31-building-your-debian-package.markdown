@@ -2,7 +2,7 @@
 layout: post
 title: Building your Debian Package
 date: 2018-12-30 15:09:00
-description: an example of a blog post with some code
+description: How to build debian package
 
 ---
 
