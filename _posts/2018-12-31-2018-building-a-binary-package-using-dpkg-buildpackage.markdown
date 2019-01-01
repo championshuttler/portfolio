@@ -226,3 +226,7 @@ hello 2.0.0
 ## Conclusion
 
 Congratulations, you have learned how to use the dpkg-buildpackage workflow and structure to build a binary package! However this only concludes the beginning of your journey. In the next blog, let's have a look at how we can package a C application, and introduce you to `debhelper`.
+
+Thanks for reading. Cheers!!
+
+I code at <a href="https://github.com/championshuttler" target="blank">@championshuttler</a> and tweet at <a href="https://twitter.com/idkHTML" target="blank">@idkHTML</a>. Let me know if you need any help.
